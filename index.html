@@ -2,182 +2,95 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="css/estilos.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/3afb7cd900.js" crossorigin="anonymous"></script>
+
+
+    <title>Squash</title>
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 
 <body>
-  <header>
+    <div id="app">
+        <header>
+            <h2>Squash</h2>
+            <nav>
+                <div class="navegador">
+                    <ul>
+                        <li v-on:click="show('inicio')">Inicio</li>
+                        <li v-on:click="show('mejores')">Mejores jugado@s</li>
+                        <li v-on:click="show('reglas')">Reglas</li>
+                        <li v-on:click="show('donde')">Donde jugar</li>
+                        <li v-on:click="show('contacto')">Contacto</li>
+                    </ul>
+                    <!-- <button v-on:click="show('inicio')">Inicio</button> 
+                    <button v-on:click="show('mejores')">Mejores jugadoras y jugadores</button>
+                    <button v-on:click="show('reglas')">Reglas del squash</button>
+                    <button v-on:click="show('donde')">Donde jugar</button>
+                    <button v-on:click="show('contacto')">Contacto</button>-->
 
-  </header>
-  <main>
-    <!-- creamos etiquetas semánticas para las secciones, le ponemos un id para diferenciarlas
-    y una clase para css en común -->
-    <section id="whatIs"> 
-
-
-    <div>
-      <h1>Squash
-        <h2> ¿Que es el squash?</h2>
-        <h3> El squash es un deporte de raqueta que se juega en una pista cerrada con paredes. Los jugadores golpean una
-          pelota pequeña y dura contra la pared frontal de la pista, tratando de hacer que la pelota rebote en lugares
-          donde su oponente no pueda alcanzarla. El objetivo es ganar puntos al hacer que la pelota rebote dos veces en
-          el suelo antes de que el oponente pueda devolverla. El squash se juega tanto en individuales como en dobles y
-          requiere una gran cantidad de habilidad, velocidad, resistencia y estrategia. Es un deporte muy popular en
-          muchos países del mundo y es considerado como uno de los deportes más exigentes físicamente.
-
-
-        </h3>
-
-
-      </h1>
-      <img src="https://tse4.mm.bing.net/th?id=OIP.MBJz1B1u2_o6XElIpXUJkQHaE8&pid=Api&P=0">
-    </div>
-  </section>
-  <section id="bestPlayers">
-    <div>
-      <table border="1">
-        <caption><b> Mejores jugadores del mundo:</b></caption>
-        <tbody>
-          <tr>
-            </td>
-            <td><b> Mohamed El Shorbagy</b></td>
-            <td>Campeonato Mundial de Squash Masculino de 2017</td>
-            <td><img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVxYYpiXgLK4xvn6ZBDpJeE4uIYSMtC5lj2Q&usqp=CAU"
-                alt="" width="300" height="200">
-          </tr>
-          <tr>
-            <td><b> Mostafa Asal</b></td>
-            <td>ganador más joven del Campeonato de Canarias 2021</td>
-            <td><img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvc8FTNI2te787z-NKbQot0N0sp2TH8_DsUw&usqp=CAU"
-                alt="100" width="300"></td>
-          </tr>
-          <tr>
-            <td><b> Hania El Hammamy</b></td>
-            <td>Campeonato Mundial Junior de 2017 y el Campeonato Británico Abierto de 2021.</td>
-            <td><img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSf3pEGL-ogSjCldwLRYeavrtavsRI0-lduTuaMzWBCO8PVb6n1U_nG4ZLrc-gFWHE2MpQ&usqp=CAU"
-                alt=""></td>
-          </tr>
-          <tr>
-            <td><b> Marwan El shorbagy</b></td>
-            <td>Campeonato de Estados Unidos de 2018</td>
-            <td><img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpFRbzH-ifl7uXnWAAneHxAHDRi_a-f-yevg&usqp=CAU"
-                alt=""></td>
-          </tr>
-          <tr>
-            <td><b>El Sherbini</b> </td>
-            <td>Campeonato Mundial de Squash Femenino en cuatro ocasiones (2015, 2016, 2018 y 2019)</td>
-            <td><img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ258aQLFOcC1RizVDLK4WU_Lo-Fj4mOZMGUg&usqp=CAU"
-                alt=""></td>
-          </tr>
-
-
-        </tbody>
-        </p>
-        </td>
-      </table>
-      <h1>Card con hover</h1>
-      <div class="container">
-        
-        <div class="card">
-          <header>
-          <img src="img/masc01.png" alt="Foto de Diego Elias">
-          <h4>Diego Elias</h4>            
-          </header>
-          <main>
-          <p>🇵🇪 (19/4/96) A lo largo de su carrera ha conseguido múltiples títulos, incluyendo el Campeonato Mundial Junior de 2016
-             y el Campeonato Panamericano de 2018. Es considerado uno de los jugadores más prometedores del circuito mundial de squash.</p>            
-          </main>
-
-        </div>
-        <div class="card">
-          <img src="img/masc02.png" alt="Foto de Mohamed El Shorbagy">
-          <h4>Mohamed El Shorbagy</h4>
-<p>🇪🇬  no de los jugadores más exitosos de la historia de su deporte, con tres títulos de Campeonato Mundial y varias temporadas como número uno
-   del mundo en el ranking de la PSA (Asociación de Squash Profesional)..</p>
-        </div>
-        <div class="card">
-          <img src="img/masc03.png" alt="Foto de Mostafa Asal">
-          <h4>Mostafa Asal</h4>
-          <p>Considerado uno de los jugadores más emocionantes y con mayor potencial del circuito, a pesar de su juventud. Ha conseguido varios títulos
-             importantes en su carrera, incluyendo el Campeonato Mundial Junior de 2019 y el Torneo de las Pirámides de 2020.</p>
-        </div>
-        <div class="card">
-          <img src="img/masc04.png" alt="Foto de Alí Farag">
-          <h4>Alí Farag</h4>
-          <p>ha conseguido varios títulos importantes en su carrera, incluyendo el Campeonato Mundial de 2019 y el Abierto de los Estados Unidos de 2020.
-             También ha sido número uno del mundo en el ranking de la PSA.
-             Fuera de la cancha, es conocido por su compromiso con la filantropía y la justicia social.</p>
-             <a href="#">Leer más</a>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section id="placesToPlay">
-    <div>
-      <h2>Lugares en La Plata donde jugar Squash</h2>
-
-
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d52341.86248700079!2d-57.96870130027814!3d-34.92234660578447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1ssquash!5e0!3m2!1ses-419!2sar!4v1682468093954!5m2!1ses-419!2sar"
-        width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-    <div>
-      <h2>¿Conoces las reglas y como funciona el Squash?</h2>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/VudmG-VeFv8" title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen></iframe>
-    </div>
-  </section>
-  <section id="suscriptForm">
-
-    <div>
-      <fieldset class="mifieldset.css">
-        <div>
-          <form action="mostrar_datos.html">
-            <label for="">Mail:</label>
-            <input type="email" name="" id="" title="Ingresar email">
-          </form>
-        </div>
-        <br>
-        <form action="mostrar_datos.html">
-          <label for="">Localidad:</label>
-          <input type="text" name="" id="" title="Ingresar localidad">
-        </form>
-        <div>
-          <br>
-          <form action="mostrar_datos.html">
-            <label for="">Numero de celular:</label>
-            <input type="number" name="" placeholder="" value="54" title="Ingresar numero de celular">
-          </form>
-        </div>
-      </fieldset>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <section>
+                <article>
+                    <div v-show="inicio_ver">
+                        <inicio></inicio>
+                    </div>
+                    <div v-show="mejores_ver">
+                        <mejores></mejores>
+                    </div>
+                    <div v-show="reglas_ver">
+                        <reglas></reglas>
+                    </div>
+                    <div v-show="donde_ver">
+                        <donde></donde>
+                    </div>
+                    <div v-show="contacto_ver">
+                        <contacto></contacto>
+                    </div>
+                </article>
+            </section>
+        </main>
     </div>
 
 
+    <!--CDN de Vue, version de desarrollo -->
+    <script src="https://unpkg.com/vue@next"></script>
+
+    <!-- Script con los componentes -->
+    <script src="js/inicio.js"></script>
+
+    <!-- Script con el footer -->
+    <script src="js/contacto.js"></script>
+
+    <!-- Script con reglas del squash -->
+    <script src="js/mejores.js"></script>
+
+    <!-- Script con reglas del squash -->
+    <script src="js/reglas.js"></script>
+
+    <!-- Script con el donde jugar -->
+    <script src="js/donde.js"></script>
+
+    <!-- Nuestro script con Vue-->
+    <script src="js/scriptvue.js"></script>
 
 
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+        </script>
 
-
-
-
-
-
-    </div>
-    <br>
-    <input type="submit" value="Enviar respuestas">
-  </section>
-  </main>
+    <footer>
+        <i class="fa-brands fa-square-facebook fa-xl" style="color: #d4d4d4;"></i>
+        <i class="fa-brands fa-square-instagram fa-xl" style="color: #d4d4d4;"></i>
+        <i class="fa-brands fa-square-twitter fa-xl" style="color: #d4d4d4;"></i>
+        <i class="fa-brands fa-linkedin fa-xl" style="color: #d4d4d4;"></i>
+    </footer>
 
 </body>
 
