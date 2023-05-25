@@ -1,3 +1,4 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,93 +6,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Squash</title>
     <script src="https://kit.fontawesome.com/3afb7cd900.js" crossorigin="anonymous"></script>
 
-
-    <title>Squash</title>
-    <link rel="stylesheet" href="css/estilos.css">
 </head>
 
 <body>
-    <div id="app">
-        <header>
-            <h2>Squash</h2>
-            <nav>
-                <div class="navegador">
-                    <ul>
-                        <li v-on:click="show('inicio')">Inicio</li>
-                        <li v-on:click="show('mejores')">Mejores jugado@s</li>
-                        <li v-on:click="show('reglas')">Reglas</li>
-                        <li v-on:click="show('donde')">Donde jugar</li>
-                        <li v-on:click="show('contacto')">Contacto</li>
-                    </ul>
-                    <!-- <button v-on:click="show('inicio')">Inicio</button> 
-                    <button v-on:click="show('mejores')">Mejores jugadoras y jugadores</button>
-                    <button v-on:click="show('reglas')">Reglas del squash</button>
-                    <button v-on:click="show('donde')">Donde jugar</button>
-                    <button v-on:click="show('contacto')">Contacto</button>-->
-
-                </div>
-            </nav>
-        </header>
-        <main>
-            <section>
-                <article>
-                    <div v-show="inicio_ver">
-                        <inicio></inicio>
-                    </div>
-                    <div v-show="mejores_ver">
-                        <mejores></mejores>
-                    </div>
-                    <div v-show="reglas_ver">
-                        <reglas></reglas>
-                    </div>
-                    <div v-show="donde_ver">
-                        <donde></donde>
-                    </div>
-                    <div v-show="contacto_ver">
-                        <contacto></contacto>
-                    </div>
-                </article>
-            </section>
-        </main>
+    <header>
+        <div class="nombre">
+            <h1>DOBLE PARED SQUASH</h1>
+        </div>
+<ul class="navbar">
+        <li><a href="#" onclick="cargarContenido('inicio.html')">Inicio</a></li>
+        <li><a href="#" onclick="cargarContenido('historia.html')">Historia</a></li>
+        <li><a href="#" onclick="cargarContenido('mejores_jugadores.html')">Mejores Jugadores</a></li>
+        <li><a href="#" onclick="cargarContenido('principales_torneos.html')">Principales Torneos</a></li>
+        <li><a href="#" onclick="cargarContenido('fixture.html')">Próximos Partidos</a></li>
+        <li><a href="#" onclick="cargarContenido('donde_jugar.html')">Donde jugar</a></li>
+        <li><a href="#" onclick="cargarContenido('form.html')">Formulario</a></li>
+    </ul>
+    </header>
+    <main>
+    <div id="miContenido" class="ppal">
+        <!-- Aquí se mostrará el contenido dinámico  -->
     </div>
+    </main>
+    
 
-
-    <!--CDN de Vue, version de desarrollo -->
-    <script src="https://unpkg.com/vue@next"></script>
-
-    <!-- Script con los componentes -->
-    <script src="js/inicio.js"></script>
-
-    <!-- Script con el footer -->
-    <script src="js/contacto.js"></script>
-
-    <!-- Script con reglas del squash -->
-    <script src="js/mejores.js"></script>
-
-    <!-- Script con reglas del squash -->
-    <script src="js/reglas.js"></script>
-
-    <!-- Script con el donde jugar -->
-    <script src="js/donde.js"></script>
-
-    <!-- Nuestro script con Vue-->
-    <script src="js/scriptvue.js"></script>
-
-
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
-        </script>
 
     <footer>
-        <i class="fa-brands fa-square-facebook fa-xl" style="color: #d4d4d4;"></i>
-        <i class="fa-brands fa-square-instagram fa-xl" style="color: #d4d4d4;"></i>
-        <i class="fa-brands fa-square-twitter fa-xl" style="color: #d4d4d4;"></i>
-        <i class="fa-brands fa-linkedin fa-xl" style="color: #d4d4d4;"></i>
+        <a href="https://es-la.facebook.com/" target="_blank"><i class="fa-brands fa-square-facebook fa-xl" style="color: #d4d4d4;"></i></a>
+        <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-square-instagram fa-xl" style="color: #d4d4d4;"></i></a>
+        <a href="https://twitter.com/home" target="_blank"><i class="fa-brands fa-square-twitter fa-xl" style="color: #f3dfdf;"></i></a>
+        <a href="https://ar.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin fa-xl" style="color: #d4d4d4;"></i></a>
     </footer>
-
+    <script src="codigo.js"></script>
 </body>
 
 </html>
